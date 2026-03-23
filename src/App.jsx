@@ -11,21 +11,33 @@ const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwUxacarqL-TZldxc8Z
 const BASE = import.meta.env.BASE_URL;
 
 const INITIAL_BOOKS = [
+  { id: "caperucita-roja", title: "Caperucita roja", cover: `${BASE}albums/Caperucita roja.png`, placedIn: null, justification: "" },
   { id: "cosas-que-vienen-y-van", title: "Cosas que vienen y van", cover: `${BASE}albums/Cosas que vienen y van.png`, placedIn: null, justification: "" },
+  { id: "diez-deditos", title: "Diez deditos", cover: `${BASE}albums/Diez deditos.png`, placedIn: null, justification: "" },
   { id: "el-arbol-generoso", title: "El árbol generoso", cover: `${BASE}albums/El árbol generoso.png`, placedIn: null, justification: "" },
+  { id: "el-ascensor", title: "El ascensor", cover: `${BASE}albums/El ascensor.png`, placedIn: null, justification: "" },
   { id: "el-caballero-impetuoso", title: "El caballero impetuoso", cover: `${BASE}albums/El caballero impetuoso.png`, placedIn: null, justification: "" },
   { id: "el-cartero-simpatico", title: "El cartero simpático", cover: `${BASE}albums/El cartero simpático.png`, placedIn: null, justification: "" },
   { id: "el-libro-de-los-cerdos", title: "El libro de los cerdos", cover: `${BASE}albums/El libro de los cerdos.png`, placedIn: null, justification: "" },
   { id: "el-libro-negro-de-los-colores", title: "El libro negro de los colores", cover: `${BASE}albums/El libro negro de los colores.png`, placedIn: null, justification: "" },
   { id: "el-poder-de-las-historias", title: "El poder de las historias", cover: `${BASE}albums/El poder de las historias.png`, placedIn: null, justification: "" },
+  { id: "excursion", title: "Excursión", cover: `${BASE}albums/Excursión.png`, placedIn: null, justification: "" },
+  { id: "fernando-furioso", title: "Fernando furioso", cover: `${BASE}albums/fernando furioso.png`, placedIn: null, justification: "" },
   { id: "henri-viaja-a-paris", title: "Henri viaja a París", cover: `${BASE}albums/Henri viaja a París.png`, placedIn: null, justification: "" },
   { id: "la-bella-griselda", title: "La bella Griselda", cover: `${BASE}albums/La bella Griselda.png`, placedIn: null, justification: "" },
   { id: "la-excursion-del-senor-gumpy", title: "La excursión del señor Gumpy", cover: `${BASE}albums/La excursión del señor Gumpy.png`, placedIn: null, justification: "" },
+  { id: "la-extrana-visita", title: "La extraña visita", cover: `${BASE}albums/La extraña visita.png`, placedIn: null, justification: "" },
+  { id: "la-giganta", title: "La giganta", cover: `${BASE}albums/La giganta.png`, placedIn: null, justification: "" },
   { id: "la-pelota-amarilla", title: "La pelota amarilla", cover: `${BASE}albums/La pelota amarilla.png`, placedIn: null, justification: "" },
+  { id: "libro-caracol", title: "Libro caracol", cover: `${BASE}albums/Libro caracol.png`, placedIn: null, justification: "" },
+  { id: "los-carpinchos", title: "Los carpinchos", cover: `${BASE}albums/Los carpinchos.png`, placedIn: null, justification: "" },
+  { id: "los-tres-erizos", title: "Los tres erizos", cover: `${BASE}albums/Los tres erizos.png`, placedIn: null, justification: "" },
   { id: "ser-un-fantasma-es-lo-mejor", title: "Ser un fantasma es lo mejor", cover: `${BASE}albums/Ser un fantasma es lo mejor.png`, placedIn: null, justification: "" },
   { id: "toc-toc", title: "Toc, toc", cover: `${BASE}albums/Toc, toc.png`, placedIn: null, justification: "" },
   { id: "una-gran-historia-de-vaqueros", title: "Una gran historia de vaqueros", cover: `${BASE}albums/Una gran historia de vaqueros.png`, placedIn: null, justification: "" },
+  { id: "una-pesadilla-en-mi-armario", title: "Una pesadilla en mi armario", cover: `${BASE}albums/Una pesadilla en mi armario.png`, placedIn: null, justification: "" },
   { id: "y-si-nono", title: "Y si NoNo", cover: `${BASE}albums/Y si NoNo.png`, placedIn: null, justification: "" },
+  { id: "zum-zum-el-viaje-de-la-semilla", title: "Zum zum. El viaje de la semilla", cover: `${BASE}albums/Zum zum. El viaje de la semilla.png`, placedIn: null, justification: "" },
 ];
 
 function Modal({ open, children }) {
@@ -386,8 +398,8 @@ const styles = {
   },
   layout: {
     display: "grid",
-    gridTemplateColumns: "1.5fr 1fr",
-    gap: "16px",
+    gridTemplateColumns: "1.3fr 1fr",
+    gap: "14px",
   },
   tierPanel: {
     background: "#111111",
@@ -397,25 +409,25 @@ const styles = {
   },
   tierRow: {
     display: "grid",
-    gridTemplateColumns: "110px 1fr",
-    gap: "16px",
-    marginBottom: "16px",
+    gridTemplateColumns: "92px 1fr",
+    gap: "12px",
+    marginBottom: "12px",
   },
   tierLabel: {
-    minHeight: "130px",
+    minHeight: "112px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "2.4rem",
+    fontSize: "2rem",
     fontWeight: 800,
     color: "black",
-    border: "6px solid black",
+    border: "5px solid black",
   },
   tierDropzone: {
-    minHeight: "130px",
+    minHeight: "112px",
     background: "#151515",
-    border: "6px solid black",
-    padding: "12px",
+    border: "5px solid black",
+    padding: "10px",
   },
   tierMeta: {
     display: "flex",
@@ -440,11 +452,11 @@ const styles = {
   tierBooks: {
     display: "flex",
     flexWrap: "wrap",
-    gap: "8px",
-    minHeight: "74px",
+    gap: "6px",
+    minHeight: "60px",
   },
   smallBookWrap: {
-    width: "72px",
+    width: "60px",
   },
   coverButton: {
     display: "block",
@@ -486,13 +498,13 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-    gap: "10px",
+    gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+    gap: "8px",
   },
   albumCard: {
     background: "#181818",
     border: "1px solid #333",
-    borderRadius: "10px",
+    borderRadius: "8px",
     overflow: "hidden",
     textAlign: "left",
     color: "white",
@@ -506,16 +518,16 @@ const styles = {
     display: "block",
   },
   albumInfo: {
-    padding: "6px",
+    padding: "5px",
   },
   albumTitle: {
-    fontSize: "11px",
+    fontSize: "10px",
     fontWeight: 600,
-    lineHeight: 1.2,
+    lineHeight: 1.15,
   },
   albumStatus: {
-    marginTop: "3px",
-    fontSize: "10px",
+    marginTop: "2px",
+    fontSize: "9px",
     color: "#888",
   },
   overlay: {
