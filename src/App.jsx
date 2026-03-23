@@ -7,7 +7,7 @@ const TIERS = [
   { id: "b", label: "B", color: "#e6ec70", stage: "7-8 años", stageName: "Operaciones concretas I" },
   { id: "c", label: "C", color: "#74e56f", stage: "9-11 años", stageName: "Operaciones concretas II" },
 ];
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwUxacarqL-TZldxc8ZPUAHESbGQAqkvcA8_jLWGjgJ0MHnFiem3lZus-R-isCsZoE/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbySGfhLEPb3wGChAXxp9G3HCEaxAM0ThqAamWsaBuphNUkCHO2N7Au1LIBbs2B4YjzX/exec";
 const BASE = import.meta.env.BASE_URL;
 
 const INITIAL_BOOKS = [
