@@ -9,22 +9,23 @@ const TIERS = [
 ];
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwUxacarqL-TZldxc8ZPUAHESbGQAqkvcA8_jLWGjgJ0MHnFiem3lZus-R-isCsZoE/exec";
 const BASE = import.meta.env.BASE_URL;
+
 const INITIAL_BOOKS = [
-  { id: "cosas-que-vienen-y-van", title: "Cosas que vienen y van", cover: "${BASE}albums/Cosas que vienen y van.png", placedIn: null, justification: "" },
-  { id: "el-arbol-generoso", title: "El árbol generoso", cover: "${BASE}albums/El árbol generoso.png", placedIn: null, justification: "" },
-  { id: "el-caballero-impetuoso", title: "El caballero impetuoso", cover: "${BASE}albums/El caballero impetuoso.png", placedIn: null, justification: "" },
-  { id: "el-cartero-simpatico", title: "El cartero simpático", cover: "${BASE}albums/El cartero simpático.png", placedIn: null, justification: "" },
-  { id: "el-libro-de-los-cerdos", title: "El libro de los cerdos", cover: "${BASE}albums/El libro de los cerdos.png", placedIn: null, justification: "" },
-  { id: "el-libro-negro-de-los-colores", title: "El libro negro de los colores", cover: "${BASE}albums/El libro negro de los colores.png", placedIn: null, justification: "" },
-  { id: "el-poder-de-las-historias", title: "El poder de las historias", cover: "${BASE}albums/El poder de las historias.png", placedIn: null, justification: "" },
-  { id: "henri-viaja-a-paris", title: "Henri viaja a París", cover: "${BASE}albums/Henri viaja a París.png", placedIn: null, justification: "" },
-  { id: "la-bella-griselda", title: "La bella Griselda", cover: "${BASE}albums/La bella Griselda.png", placedIn: null, justification: "" },
-  { id: "la-excursion-del-senor-gumpy", title: "La excursión del señor Gumpy", cover: "${BASE}albums/La excursión del señor Gumpy.png", placedIn: null, justification: "" },
-  { id: "la-pelota-amarilla", title: "La pelota amarilla", cover: "${BASE}albums/La pelota amarilla.png", placedIn: null, justification: "" },
-  { id: "ser-un-fantasma-es-lo-mejor", title: "Ser un fantasma es lo mejor", cover: "${BASE}albums/Ser un fantasma es lo mejor.png", placedIn: null, justification: "" },
-  { id: "toc-toc", title: "Toc, toc", cover: "${BASE}albums/Toc, toc.png", placedIn: null, justification: "" },
-  { id: "una-gran-historia-de-vaqueros", title: "Una gran historia de vaqueros", cover: "${BASE}albums/Una gran historia de vaqueros.png", placedIn: null, justification: "" },
-  { id: "y-si-nono", title: "Y si NoNo", cover: "${BASE}albums/Y si NoNo.png", placedIn: null, justification: "" },
+  { id: "cosas-que-vienen-y-van", title: "Cosas que vienen y van", cover: `${BASE}albums/Cosas que vienen y van.png`, placedIn: null, justification: "" },
+  { id: "el-arbol-generoso", title: "El árbol generoso", cover: `${BASE}albums/El árbol generoso.png`, placedIn: null, justification: "" },
+  { id: "el-caballero-impetuoso", title: "El caballero impetuoso", cover: `${BASE}albums/El caballero impetuoso.png`, placedIn: null, justification: "" },
+  { id: "el-cartero-simpatico", title: "El cartero simpático", cover: `${BASE}albums/El cartero simpático.png`, placedIn: null, justification: "" },
+  { id: "el-libro-de-los-cerdos", title: "El libro de los cerdos", cover: `${BASE}albums/El libro de los cerdos.png`, placedIn: null, justification: "" },
+  { id: "el-libro-negro-de-los-colores", title: "El libro negro de los colores", cover: `${BASE}albums/El libro negro de los colores.png`, placedIn: null, justification: "" },
+  { id: "el-poder-de-las-historias", title: "El poder de las historias", cover: `${BASE}albums/El poder de las historias.png`, placedIn: null, justification: "" },
+  { id: "henri-viaja-a-paris", title: "Henri viaja a París", cover: `${BASE}albums/Henri viaja a París.png`, placedIn: null, justification: "" },
+  { id: "la-bella-griselda", title: "La bella Griselda", cover: `${BASE}albums/La bella Griselda.png`, placedIn: null, justification: "" },
+  { id: "la-excursion-del-senor-gumpy", title: "La excursión del señor Gumpy", cover: `${BASE}albums/La excursión del señor Gumpy.png`, placedIn: null, justification: "" },
+  { id: "la-pelota-amarilla", title: "La pelota amarilla", cover: `${BASE}albums/La pelota amarilla.png`, placedIn: null, justification: "" },
+  { id: "ser-un-fantasma-es-lo-mejor", title: "Ser un fantasma es lo mejor", cover: `${BASE}albums/Ser un fantasma es lo mejor.png`, placedIn: null, justification: "" },
+  { id: "toc-toc", title: "Toc, toc", cover: `${BASE}albums/Toc, toc.png`, placedIn: null, justification: "" },
+  { id: "una-gran-historia-de-vaqueros", title: "Una gran historia de vaqueros", cover: `${BASE}albums/Una gran historia de vaqueros.png`, placedIn: null, justification: "" },
+  { id: "y-si-nono", title: "Y si NoNo", cover: `${BASE}albums/Y si NoNo.png`, placedIn: null, justification: "" },
 ];
 
 function Modal({ open, children }) {
